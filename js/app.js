@@ -3,8 +3,16 @@ var ViewModel = function() {
     this.name = ko.observable('Tabby');
     this.imgSrc = ko.observable('img/434164568_fea0ad4013_z.jpg');
     this.imgAttribution = ko.observable('https://github.com/udacity/ud989-cat-clicker-ko-starter/tree/master/img');
+    this.catList = ko.observableArray(
+        [
+            { name: 'Cuco' },
+            { name: 'Tato' },
+            { name: 'Garabato' },
+            { name: 'Coquito' }
+        ]
+    );
 
-    this.testArray = ko.observableArray(["Cuco","Tato","Garabato"]);
+    // this.testArray = ko.observableArray(["Cuco","Tato","Garabato"]);
 
     this.catLevel = ko.computed(function() {
         if (this.clickCount() <= 10) {
