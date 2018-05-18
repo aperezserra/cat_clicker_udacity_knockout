@@ -26,20 +26,6 @@ var ViewModel = function() {
         }
     }, this);
 
-
-    this.catLevel = ko.computed(function() {
-        if (this.clickCount() <= 10) {
-            return "Infant";
-        }
-        else if (this.clickCount() > 10 && this.clickCount() <= 50) {
-            return "Teen";
-        }
-        else {
-            return "Adult"
-        }
-    }, this);
-
-
     this.incrementCounter = function() {
         this.clickCount(this.clickCount() + 1);
     };
