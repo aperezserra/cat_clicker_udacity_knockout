@@ -76,9 +76,10 @@ var ViewModel = function() {
         this.clickCount(this.clickCount() + 1);
     };
 
-    this.changeCat = function() {
-        console.log("El bola");
+    this.changeCat = function(clickedCat) {
+        self.currentCat(clickedCat);
     };
+
 };
 
 
